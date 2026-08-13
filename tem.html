@@ -241,8 +241,8 @@
             top: 27%;
             font-family: var(--serif);
             font-weight: 500;
-            font-size: min(10.5vw, 60px);
-            font-size: 12cqi;
+            font-size: min(9vw, 51px);
+            font-size: 10.2cqi;
             color: var(--burgundy);
             line-height: 1.04;
             letter-spacing: .015em;
@@ -992,6 +992,112 @@
             justify-self: center;
         }
 
+        /* ---------- GIFT ---------- */
+        .gift-card {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 2.4rem 1.5rem 2rem;
+            background: var(--champagne-soft);
+            border: 1px solid var(--gold-soft);
+            border-radius: 18px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .gift-orn {
+            display: block;
+            margin: 0 auto 1rem;
+            fill: none;
+            stroke: var(--rose);
+            stroke-width: 1.1;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .gift-text {
+            font-family: var(--serif);
+            font-size: 1.12rem;
+            line-height: 1.65;
+            color: var(--ink);
+            max-width: 34ch;
+            margin: 0 auto;
+        }
+
+        .gift-text+.gift-text {
+            margin-top: .9rem;
+        }
+
+        .accounts {
+            display: flex;
+            flex-direction: column;
+            gap: .7rem;
+            align-items: center;
+            margin-top: 1.7rem;
+        }
+
+        .account {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .8rem;
+            width: 100%;
+            max-width: 320px;
+            padding: .8em 1em;
+            background: #FFFDF8;
+            border: 1px solid var(--gold-faint);
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: border-color .35s ease, transform .35s ease;
+        }
+
+        .account:hover {
+            border-color: var(--gold);
+            transform: translateY(-1px);
+        }
+
+        .account-num {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: 1.15rem;
+            letter-spacing: .04em;
+            color: var(--burgundy);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .account-copy {
+            font-size: .58rem;
+            font-weight: 600;
+            letter-spacing: .18em;
+            text-indent: .18em;
+            text-transform: uppercase;
+            color: var(--gold);
+            white-space: nowrap;
+        }
+
+        .account.copied .account-copy {
+            color: var(--rose);
+        }
+
+        @media (max-width: 480px) {
+            .gift-card {
+                padding: 2rem 1.1rem 1.7rem;
+            }
+
+            .account {
+                flex-direction: column;
+                gap: .25rem;
+                padding: .75em 1em;
+            }
+
+            .account-num {
+                font-size: 1.02rem;
+            }
+
+            .account-copy {
+                font-size: .55rem;
+            }
+        }
+
         /* ---------- CONTACTS ---------- */
         .contacts {
             display: flex;
@@ -1229,9 +1335,9 @@
         <div class="arch-wrap">
             <img class="arch" src="arch.svg" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
             <h1 class="hero-names rise d2">
-                Тэмүүлэн
+                Б.Тэмүүлэн
                 <span class="amp">&</span>
-                Бөртэ<span class="dash">-</span>Үжин
+                Э.Бөртэ<span class="dash">-</span>Үжин
             </h1>
             <p class="hero-phrase rise d3">Хоёр зүрх нэгдэн, нэг зам мөрөөр...</p>
             <p class="hero-date rise d4">2026-09-06 · Ням</p>
@@ -1399,7 +1505,7 @@
                 <figure class="slide"><img src="1.jpg" alt="" loading="lazy"></figure>
                 <figure class="slide"><img src="2.jpg" alt="" loading="lazy"></figure>
                 <figure class="slide"><img src="3.jpg" alt="" loading="lazy"></figure>
-                <figure class="slide"><img src="4.jpg" alt="" loading="lazy"></figure>
+                <figure class="slide"><img src="7.jpg" alt="" loading="lazy"></figure>
                 <figure class="slide"><img src="5.jpg" alt="" loading="lazy"></figure>
                 <figure class="slide"><img src="6.jpg" alt="" loading="lazy"></figure>
             </div>
@@ -1515,6 +1621,30 @@
         </div>
     </section>
 
+    <!-- GIFT -->
+    <section class="reveal">
+        <div class="gift-card">
+            <svg class="gift-orn" width="46" height="46" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M12 20.4c-4.6-4.3-7.5-6.7-7.5-10a4.2 4.2 0 0 1 7.5-2.5 4.2 4.2 0 0 1 7.5 2.5c0 3.3-2.9 5.7-7.5 10z" />
+            </svg>
+            <p class="gift-text">Бидний шинэ амьдралын эхлэлд хамтдаа баяр хөөрөө хуваалцах нь бидэнд хамгийн том
+                бэлэг.</p>
+            <p class="gift-text">Харин бэлэг өгөхийг хүсвэл ирээдүйн мөрөөдөлдөө зориулсан мөнгөн бэлэг бидэнд хамгийн
+                их үнэ цэнтэй байх болно. 🤍</p>
+            <div class="accounts">
+                <button class="account" type="button" data-account="MN870015001105339518">
+                    <span class="account-num">MN870015001105339518</span>
+                    <span class="account-copy">Хуулах</span>
+                </button>
+                <button class="account" type="button" data-account="MN690015003015136855">
+                    <span class="account-num">MN690015003015136855</span>
+                    <span class="account-copy">Хуулах</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT -->
     <section class="reveal">
         <div class="kicker">Холбоо барих</div>
@@ -1619,7 +1749,7 @@
             }
         }
         ['pointerdown', 'touchstart', 'keydown'].forEach(ev =>
-            document.addEventListener(ev, firstGesture, {once: true, passive: true}));
+            document.addEventListener(ev, firstGesture, { once: true, passive: true }));
 
         window.onYouTubeIframeAPIReady = function () {
             ytPlayer = new YT.Player('yt-player', {
@@ -1785,6 +1915,35 @@
                 touchX = null;
             });
         })();
+
+        // Tap an account number to copy it
+        document.querySelectorAll('.account').forEach(btn => {
+            const label = btn.querySelector('.account-copy');
+            const original = label.textContent;
+            btn.addEventListener('click', async () => {
+                const num = btn.dataset.account;
+                try {
+                    await navigator.clipboard.writeText(num);
+                } catch (err) {
+                    const ta = document.createElement('textarea');
+                    ta.value = num;
+                    ta.style.position = 'fixed';
+                    ta.style.opacity = '0';
+                    document.body.appendChild(ta);
+                    ta.select();
+                    try {
+                        document.execCommand('copy');
+                    } catch (e) {/* clipboard unavailable */}
+                    document.body.removeChild(ta);
+                }
+                label.textContent = 'Хуулагдлаа';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    label.textContent = original;
+                    btn.classList.remove('copied');
+                }, 1800);
+            });
+        });
 
         // RSVP -> compose SMS
         document.getElementById('rsvp-form').addEventListener('submit', function (e) {
